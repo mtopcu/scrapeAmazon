@@ -3,11 +3,7 @@ import time, sys
 from bs4 import BeautifulSoup
 
 def convertPrice(price): # to convert unicode price data to float type
-    prc = []
-    for i in price:
-        if i.isdigit():
-	    prc.append(i)
-	
+    prc = [i for i in price if i.isdigit()]	
     prc.insert(-2, '.')
     prc = float(''.join(prc))
     return prc
