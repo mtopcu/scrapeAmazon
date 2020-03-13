@@ -24,5 +24,4 @@ jobs:
       run: |
         python -m pip install --upgrade pip
         pip install requests
-        pwd
-        ls -l
+        python scrapeAmazon.py
